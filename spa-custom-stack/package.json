@@ -1,0 +1,19 @@
+{
+  "name": "spa-custom-stack",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "spa-custom-stack",
+  "repository": "https://github.com/75lb/spa-custom-stack",
+  "keywords": [],
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "test-runner test/*.js"
+  },
+  "devDependencies": {
+    "local-web-server": "^2.6.1",
+    "lws-spa": "^1.0.0"
+  }
+}
