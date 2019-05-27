@@ -15,5 +15,8 @@
   "devDependencies": {
     "local-web-server": "^2.6.1",
     "lws-spa": "^1.0.0"
+  },
+  "dependencies": {
+    "lws-rewrite": "^1.0.1"
   }
 }
