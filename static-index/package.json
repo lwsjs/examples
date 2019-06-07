@@ -15,6 +15,6 @@
     "lws-static": "^1.1.0"
   },
   "devDependencies": {
-    "lws-request-monitor": "^1.0.1"
+    "lws-request-monitor": "^1.0.3"
   }
 }
