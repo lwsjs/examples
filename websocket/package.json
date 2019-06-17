@@ -1,0 +1,9 @@
+{
+  "name": "websocket-example",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "websocket-example",
+  "devDependencies": {
+    "ws": "^7.0.0"
+  }
+}

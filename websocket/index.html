@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Websocket example</title>
+</head>
+<body>
+  <h1>Websocket example</h1>
+  <pre><code></code></pre>
+  <script>
+    const socket = new WebSocket('ws://localhost:8000')
+
+    socket.addEventListener('open', () => {
+      const msg = 'Hello from the client'
+      document.querySelector('code').innerHTML += `Sending: ${msg}\n`
+      socket.send(msg)
+    })
+
+    socket.addEventListener('message', event => {
+      document.querySelector('code').innerHTML += `Received: ${event.data}\n`
+    })
+  </script>
+</body>
+</html>
