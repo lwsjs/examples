@@ -1,0 +1,13 @@
+{
+  "name": "rest-api",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "rest-api",
+  "repository": "",
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "koa-route": "^3.2.0",
+    "lws-body-parser": "^1.0.2"
+  }
+}
