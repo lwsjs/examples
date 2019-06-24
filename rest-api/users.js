@@ -1,5 +1,5 @@
 const users = [
-  { id: 1, name: 'Lloyd', age: 40 },
+  { id: 1, name: 'Lloyd', age: 43 },
   { id: 2, name: 'Mona', age: 34 },
   { id: 3, name: 'Francesco', age: 24 }
 ]
@@ -24,6 +24,25 @@ class Users {
         newUser.id = users.length
         ctx.response.status = 201
         ctx.response.set('Location', `/users/${newUser.id}`)
+      }),
+      router.get('/users/:id', function (ctx, id) {
+        ctx.response.type = 'json'
+        ctx.response.body = users.find(user => user.id === Number(id))
+      }),
+      router.put('/users/:id', function (ctx, id) {
+        const existingUserIndex = users.findIndex(user => user.id === Number(id))
+        const existingUser = users.find(user => user.id === Number(id))
+        const updatedUser = Object.assign({}, existingUser, ctx.request.body)
+        users.splice(existingUserIndex, 1, updatedUser)
+        ctx.response.status = 204
+      }),
+      router.delete('/users/:id', function (ctx, id) {
+        const existingUserIndex = users.findIndex(user => user.id === Number(id))
+        users.splice(existingUserIndex, 1)
+        ctx.response.status = 204
+      }),
+      router.post('/users/:id', function (ctx) {
+        ctx.response.status = 405
       })
     ]
   }
