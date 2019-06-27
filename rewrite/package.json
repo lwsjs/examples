@@ -1,0 +1,15 @@
+{
+  "name": "rewrite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "get-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lws-rewrite": "^2.0.4",
+    "lws-static": "^1.1.3"
+  }
+}
