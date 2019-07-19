@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Websocket example</title>
+</head>
+<body>
+  <h1>Websocket example</h1>
+  <p><button>Send message</button></p>
+  <pre><code></code></pre>
+  <script>
+    const socket = new WebSocket('ws://localhost:8000/ws/')
+    const $ = document.querySelector.bind(document)
+
+    function sendMessage (msg) {
+      $('code').innerHTML += `Sending: ${msg}\n`
+      socket.send(msg)
+    }
+    socket.addEventListener('open', () => {
+      sendMessage('Hello from the client')
+    })
+
+    socket.addEventListener('message', event => {
+      $('code').innerHTML += `Received: ${event.data}\n`
+    })
+
+    $('button').addEventListener('click', e => {
+      sendMessage('Client clicked the button')
+    })
+  </script>
+</body>
+</html>
