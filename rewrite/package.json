@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lws-rewrite": "^2.0.4",
+    "lws-rewrite": "^2.0.5",
     "lws-static": "^1.1.3"
   }
 }

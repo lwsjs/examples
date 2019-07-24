@@ -18,14 +18,54 @@
   <img src="/img1/768x432/wp-content/uploads/2017/12/big-almaty-lake-min-650x395-1.jpg">
 </gallery>
 
+<h2>POST</h2>
+<pre><code>{
+  title: 'title',
+  body: 'body',
+  userId: 1
+}</code></pre>
+<p><button submit-post>Submit</button></p>
+
+<h2>POST BINARY</h2>
+<p><button submit-binary>Submit</button></p>
+
 <h2>Config</h2>
-<pre><code></code></pre>
+<pre><code config></code></pre>
 
 <script>
+  const $ = document.querySelector.bind(document)
   async function getConfig () {
     const response = await fetch('/get-lws-config')
     const json = await response.json()
-    document.querySelector('code').innerHTML = JSON.stringify(json, null, '  ')
+    $('code[config]').innerHTML = JSON.stringify(json, null, '  ')
   }
   getConfig()
+
+  $('button[submit-post]').addEventListener('click', async e => {
+    const response = await fetch('/posts', {
+      method: 'POST',
+      body: JSON.stringify({
+        title: 'title',
+        body: 'body',
+        userId: 1
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      }
+    })
+    const body = await response.text()
+    console.log(body)
+  })
+
+  $('button[submit-binary]').addEventListener('click', async e => {
+    const response = await fetch('/images', {
+      method: 'POST',
+      body: new Blob(['abc123'], { type: 'text/plain' }),
+      headers: {
+        // 'Content-type': 'application/json; charset=UTF-8'
+      }
+    })
+    const body = await response.text()
+    console.log(body)
+  })
 </script>
