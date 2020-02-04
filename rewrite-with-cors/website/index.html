@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mock page</title>
+</head>
+<body>
+  <h1>mock page</h1>
+  <script>
+    async function start () {
+      const response = await fetch('http://localhost:9000/some-data.json')
+      const response2 = await fetch('/some-data.json')
+      console.log(response)
+      const json = await response.json()
+      console.log(json)
+      console.log(response2)
+      const json2 = await response2.json()
+      console.log(json2)
+    }
+
+    start().catch(console.error)
+  </script>
+</body>
+</html>
