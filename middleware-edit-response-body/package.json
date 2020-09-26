@@ -1,0 +1,11 @@
+{
+  "name": "example",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "example",
+  "repository": "https://github.com/75lb/example",
+  "license": "MIT",
+  "dependencies": {
+    "stream-read-all": "^3.0.0"
+  }
+}

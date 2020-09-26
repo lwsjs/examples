@@ -1,7 +1,8 @@
 class ExamplePlugin {
-  middleware (config, lws) {
-    return function (ctx, next) {
+  middleware (config) {
+    return async function (ctx, next) {
       ctx.body = 'Hello from lws!'
+      await next()
     }
   }
 }
