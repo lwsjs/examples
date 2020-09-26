@@ -1,4 +1,6 @@
-# local-web-server examples
+# Example projects
+
+A collection of sample projects showing how `lws` can be used.
 
 * * *
 
