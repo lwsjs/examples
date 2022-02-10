@@ -11,20 +11,21 @@ module.exports = {
     { from: '/images', to: 'http://jsonplaceholder.typicode.com/posts' }
   ],
   stack: [
-      'lws-basic-auth',
-      'lws-body-parser',
-      'lws-request-monitor',
-      'lws-log',
-      'lws-cors',
-      'lws-json',
-      'lws-compress',
-      'lws-rewrite',
-      'lws-blacklist',
-      'lws-conditional-get',
-      'lws-mime',
-      'lws-range',
-      'lws-spa',
-      'lws-static',
-    'lws-index'
-    ]
+    'lws-basic-auth',
+    'lws-body-parser',
+    'lws-request-monitor',
+    'lws-log',
+    'lws-cors',
+    'lws-json',
+    'lws-compress',
+    'lws-rewrite',
+    'lws-blacklist',
+    'lws-conditional-get',
+    'lws-mime',
+    'lws-range',
+    'lws-spa',
+    'lws-static',
+    'lws-index',
+    'get-config.js'
+  ]
 }

@@ -6,8 +6,11 @@
   "repository": "https://github.com/75lb/example",
   "license": "MIT",
   "dependencies": {
-    "lws": "^3.1.0",
+    "lws": "^4.0.0-1",
     "lws-static": "^2.0.0",
-    "stream-read-all": "^3.0.0"
+    "stream-read-all": "^3.0.1"
+  },
+  "scripts": {
+    "test": "lws --stack ./edit-response.mjs lws-static"
   }
 }

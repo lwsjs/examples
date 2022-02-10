@@ -8,6 +8,6 @@
   "license": "MIT",
   "devDependencies": {
     "koa-route": "^3.2.0",
-    "lws-body-parser": "^1.0.2"
+    "lws-body-parser": "^2.0.0"
   }
 }

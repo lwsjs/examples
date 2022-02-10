@@ -1,3 +1,5 @@
+import router from 'koa-route'
+
 const users = [
   { id: 1, name: 'Lloyd', age: 43 },
   { id: 2, name: 'Mona', age: 34 },
@@ -6,7 +8,6 @@ const users = [
 
 class Users {
   middleware () {
-    const router = require('koa-route')
     return [
       router.get('/users', function (ctx) {
         ctx.response.type = 'json'
@@ -48,4 +49,4 @@ class Users {
   }
 }
 
-module.exports = Users
+export default Users

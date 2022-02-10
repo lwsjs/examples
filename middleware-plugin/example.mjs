@@ -7,4 +7,4 @@ class ExamplePlugin {
   }
 }
 
-module.exports = ExamplePlugin
+export default ExamplePlugin

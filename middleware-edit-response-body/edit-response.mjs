@@ -1,4 +1,4 @@
-const streamReadAll = require('stream-read-all')
+import streamReadAll from 'stream-read-all'
 
 class EditResponse {
   middleware (config) {
@@ -14,4 +14,4 @@ class EditResponse {
   }
 }
 
-module.exports = EditResponse
+export default EditResponse
