@@ -1,0 +1,19 @@
+{
+  "name": "custom-404",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "custom-404",
+  "repository": "custom-404",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.17"
+  },
+  "scripts": {
+    "test": "npm run test:ci",
+    "test:ci": "test-runner test.js",
+    "dist": "rollup -c"
+  },
+  "devDependencies": {
+    "local-web-server": "^5.3.4"
+  }
+}
