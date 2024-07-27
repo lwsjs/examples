@@ -1,0 +1,36 @@
+{
+  "name": "reverse-proxy",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "reverse-proxy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/75lb/reverse-proxy.git"
+  },
+  "type": "module",
+  "exports": {
+    "import": "./index.js",
+    "require": "./dist/index.cjs"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.20"
+  },
+  "scripts": {},
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "standard": {
+    "ignore": [
+      "tmp",
+      "dist"
+    ],
+    "envs": []
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0"
+  }
+}

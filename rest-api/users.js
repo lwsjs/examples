@@ -1,5 +1,6 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import cors from 'cors'
 
 const users = [
   { id: 1, name: 'Lloyd', age: 43 },
@@ -7,6 +8,9 @@ const users = [
   { id: 3, name: 'Francesco', age: 24 }
 ]
 
+/**
+ * ws2 --app users.js --port 3000
+ */
 class RestAPIApplication {
   requestHandler () {
     const app = express()
@@ -58,6 +62,8 @@ class RestAPIApplication {
     //   ctx.response.status = 405
     // })
 
+
+    app.use(cors())
     app.use(bodyParser.json())
     app.use('/', router)
     return app
