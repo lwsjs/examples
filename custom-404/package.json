@@ -8,12 +8,5 @@
   "engines": {
     "node": ">=12.17"
   },
-  "scripts": {
-    "test": "npm run test:ci",
-    "test:ci": "test-runner test.js",
-    "dist": "rollup -c"
-  },
-  "devDependencies": {
-    "local-web-server": "^5.3.4"
-  }
+  "scripts": {}
 }
