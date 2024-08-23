@@ -3,6 +3,8 @@ import https from 'node:https'
 
 /**
  * DEBUG=* ws2 --app app.js
+ *
+ * Raw Node.js request handler - no express or Koa required.
  */
 class ReverseProxyApplication {
   requestHandler () {

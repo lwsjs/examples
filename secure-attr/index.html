@@ -1,11 +1,21 @@
 <h1>cookies</h1>
+<p>HTTP reverse-proxying to HTTPS server which returns a cookie with the `secure` attribute.</p>
 <h2></h2>
+<figure>
+  <img src="image.png" style="width: 200px"/>
+  <figcaption>Same-origin image</figcaption>
+</figure>
+<figure>
+  <img src="https://randomwordgenerator.com/img/picture-generator/5ee4d3434d55b10ff3d8992cc12c30771037dbf85254794e73287ad1944f_640.jpg" style="width: 200px"/>
+  <figcaption>Remote origin image</figcaption>
+</figure>
 
 <script type="module">
   const $ = document.querySelector.bind(document)
   async function start () {
-    const response = await fetch('/yeah', { credentials: 'include' })
-    // const response = await fetch('https://127.0.0.1:8000', { credentials: 'include' })
+    /* secure attribute should block cookie */
+    const response = await fetch('https://127.0.0.1:8000', { credentials: 'include' })
+
     if (response.ok) {
       const json = await response.json()
       console.log(json)

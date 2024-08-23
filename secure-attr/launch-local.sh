@@ -1,1 +1,1 @@
-ws --stack ../../rewrite/ static -p 8020 --rewrite '/yeah -> https://127.0.0.1:8000'
+lws server --port 8020  server --app ./cookies.js --https
