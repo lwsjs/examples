@@ -1,1 +1,1 @@
-ws --stack cors ./cookies.js --cors.credentials --https
+ws --stack lws-cors ./cookies.js --cors.credentials --https

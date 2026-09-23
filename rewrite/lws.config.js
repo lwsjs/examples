@@ -5,7 +5,7 @@ module.exports = {
     { from: '/broken/(.*)', to: 'http://localhost:9999' },
     { from: '/gov', to: 'https://www.gov.uk' },
     { from: '/:user/repos/:name', to: 'https://api.github.com/repos/:user/:name' },
-    { from: '/img1/(.*)', to: 'https://img.theculturetrip.com/$1' },
+    { from: '/img1/(.*)', to: 'https://upload.wikimedia.org/$1' },
     { from: '/ws/(.*)', to: 'http://127.0.0.1:8100/$1' },
     { from: '/posts', to: 'http://jsonplaceholder.typicode.com/posts' },
     { from: '/images', to: 'http://jsonplaceholder.typicode.com/posts' }

@@ -13,6 +13,10 @@ class Users {
         ctx.response.type = 'json'
         ctx.response.body = users
       }),
+      router.get('/', function (ctx) {
+        ctx.response.type = 'html'
+        ctx.response.body = 'Available paths: /users, /users/:id'
+      }),
       router.put('/users', function (ctx) {
         ctx.response.status = 405
       }),
